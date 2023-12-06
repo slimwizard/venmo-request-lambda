@@ -23,7 +23,7 @@ client = Client(access_token=access_token)
 user_id = client.user.search_for_users("Madisonmoore35")[0].id
 print(user_id)
 ```
-## Authenticating 
+## Authenticating the Function against the Venmo API
 Function expects your Venmo access token to be set as an environment variable named "ACCESS_TOKEN". Your access token can be pulled via the following code:
 
 ```
@@ -33,6 +33,6 @@ access_token = Client.get_access_token(username='<your Venmo username>', passwor
 print(access_token)
 ```
 
-Note that access tokens NEVER expire and must be explicitly deleted. Instructions on how to delete an access token can be found in the venmo-api [documentation](https://venmo.readthedocs.io/en/latest/).
+Note that access tokens NEVER expire and must be explicitly revoked. Instructions on how to delete an access token can be found in the venmo-api [documentation](https://venmo.readthedocs.io/en/latest/).
 
 
