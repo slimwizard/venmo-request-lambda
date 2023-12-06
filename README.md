@@ -20,9 +20,9 @@ You must pass the recipient's Venmo user ID and *not* the recipient's username a
 ```
 from venmo_api import Client
 
-access_token = Client.get_access_token(username='<your Venmo username>', password='your Venmo password')
+access_token = Client.get_access_token(username='<your Venmo username>', password='<your Venmo password>')
 client = Client(access_token=access_token)
-user_id = client.user.search_for_users("Madisonmoore35")[0].id
+user_id = client.user.search_for_users('<recipient username>')[0].id
 print(user_id)
 ```
 
